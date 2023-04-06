@@ -12,7 +12,11 @@ func TestPush(t *testing.T) {
 	s.Push(2)
 	s.Push(3)
 
-	if s[0] != 1 || s[1] != 2 || s[2] != 3 {
+	n3, _ := s.Top()
+	n2, _ := s.Top()
+	n1, _ := s.Top()
+
+	if n1 != 1 || n2 != 2 || n3 != 3 {
 		t.Error("Error en Push")
 	}
 }
