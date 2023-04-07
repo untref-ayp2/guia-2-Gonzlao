@@ -5,16 +5,16 @@ import (
 	"testing"
 )
 
-func TestPush(t *testing.T) {
+func TestPush(t *testing.T) { // se modifico ya que el slice esta encapsulado. Para poder comparar cada elemento se agregaron los Pops correspondientes.
 	var s stack.Stack
 
 	s.Push(1)
 	s.Push(2)
 	s.Push(3)
 
-	n3, _ := s.Top()
-	n2, _ := s.Top()
-	n1, _ := s.Top()
+	n3, _ := s.Pop()
+	n2, _ := s.Pop()
+	n1, _ := s.Pop()
 
 	if n1 != 1 || n2 != 2 || n3 != 3 {
 		t.Error("Error en Push")
