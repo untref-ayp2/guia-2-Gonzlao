@@ -38,6 +38,11 @@ func (q *Queue) IsEmpty() bool {
 	return len((*q).cola) == 0
 }
 
+// Se creo esta funcion para poder acceder al slice encapsulado sin riesgo a ser modificado. Esta funcion retorna una copia del slice.
+func (q *Queue) Show() []any {
+	return q.cola
+}
+
 type QueueS struct {
 	pila1 stack.Stack
 	pila2 stack.Stack

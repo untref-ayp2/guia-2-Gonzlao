@@ -29,7 +29,7 @@ func TestBalanceada(t *testing.T) {
 	}
 }
 
-func TestUnirColas(t *testing.T) {
+func TestUnirColas(t *testing.T) { // se modifico para poder acceder a los slices encapsulados
 	var q1 queue.Queue
 	var q2 queue.Queue
 	var q12_esperado queue.Queue
@@ -48,7 +48,7 @@ func TestUnirColas(t *testing.T) {
 	q12_esperado.Enqueue(7)
 
 	q12_dado := ejercicios.UnirColas(q1, q2)
-	if !cmp.Equal(q12_dado, q12_esperado) {
+	if !cmp.Equal(q12_dado.Show(), q12_esperado.Show()) {
 		t.Error("UnirColas falla")
 	}
 }
