@@ -49,15 +49,7 @@ type QueueS struct {
 }
 
 func (q *QueueS) Enqueue(v any) { // O(n)
-	if q.IsEmpty() {
-		q.pila1.Push(v)
-	} else {
-		for !q.pila2.IsEmpty() {
-			aux, _ := q.pila2.Pop()
-			q.pila1.Push(aux)
-		}
-		q.pila1.Push(v)
-	}
+	q.pila1.Push(v)
 }
 
 func (q *QueueS) Dequeue() (any, error) { // O(n)
