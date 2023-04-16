@@ -33,7 +33,7 @@ func (q *QueueS) Front() (any, error) {
 }
 
 ```
-
+<b> Se resolvieron en los archivos queue.go y stack.go y se modificaron los test para que funcionen con los atributos encapsulados </b>
 ### Usos de pilas y colas
 Carpeta `ejercicios`
 

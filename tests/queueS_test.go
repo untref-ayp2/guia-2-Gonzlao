@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestQueue(t *testing.T) {
+func TestQueueS(t *testing.T) {
 	q := queue.QueueS{}
 
 	q.Enqueue(1)
